@@ -6,7 +6,6 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Instant;
 import java.util.UUID;
 
 @RestController
@@ -22,6 +21,7 @@ public class EmployeeController {
     public ResponseEntity<?> createEmployee(@Valid @RequestBody CreateEmployeeRequest req){
         String employeeId = UUID.randomUUID().toString();
         String eventId = UUID.randomUUID().toString();
+        long now = java.time.Instant.now().toEpochMilli();
 
         EmployeeCreatedEvent event = new EmployeeCreatedEvent(
             eventId,
@@ -29,7 +29,7 @@ public class EmployeeController {
             req.name(),
             req.department(),
             req.email(),
-            Instant.now(),
+            now,
             1
         );
         
