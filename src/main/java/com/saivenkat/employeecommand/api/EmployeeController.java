@@ -1,6 +1,7 @@
 package com.saivenkat.employeecommand.api;
 
-import com.saivenkat.employeecommand.events.EmployeeCreatedEvent;
+// import com.saivenkat.employeecommand.events.EmployeeCreatedEvent;
+import com.saivenkat.employee.contracts.events.EmployeeCreatedEvent;
 import com.saivenkat.employeecommand.events.EmployeeEventProducer;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

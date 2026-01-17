@@ -1,5 +1,7 @@
 package com.saivenkat.employeecommand.events;
 
+import com.saivenkat.employee.contracts.events.EmployeeCreatedEvent;
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
